@@ -30,8 +30,8 @@ request("https://www.sanook.com/horoscope/152061/", (error, response, html) => {
   restService.post("/echo", function(req, res) {
     var speech = output;
     return res.json({
-      speech: speech,
-      displayText: speech,
+      speech: "speech",
+      displayText: "speech",
       source: "webhook-echo-sample"
     });
   });
