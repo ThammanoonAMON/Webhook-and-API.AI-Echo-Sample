@@ -7,6 +7,11 @@ const cheerio = require("cheerio");
 var output1;
 var output2;
 var output3;
+var output4;
+var output5;
+var output6;
+var output7;
+var output8;
 var result;
 
 const restService = express();
@@ -37,7 +42,47 @@ request("https://www.sanook.com/horoscope/152061/", (error, response, html) => {
       .slice(2, 3)
       .text();
 
-    result = output1 + "\n" + output2 + "\n" + output3;
+    output4 = luck
+      .find("p")
+      .slice(3, 4)
+      .text();
+
+    output5 = luck
+      .find("p")
+      .slice(4, 5)
+      .text();
+
+    output6 = luck
+      .find("p")
+      .slice(5, 6)
+      .text();
+
+    output7 = luck
+      .find("p")
+      .slice(6, 7)
+      .text();
+
+    output8 = luck
+      .find("p")
+      .slice(7, 8)
+      .text();
+
+    result =
+      output1 +
+      "\n" +
+      output2 +
+      "\n" +
+      output3 +
+      "\n" +
+      output4 +
+      "\n" +
+      output5 +
+      "\n" +
+      output6 +
+      "\n" +
+      output7 +
+      "\n" +
+      output8;
   }
 });
 
