@@ -37,7 +37,7 @@ request("https://www.sanook.com/horoscope/152061/", (error, response, html) => {
       .slice(2, 3)
       .text();
 
-    result = output1 + "\n" + output2 + "\\\\n" + output3;
+    result = output1 + "\n" + output2 + "\n" + output3;
   }
 });
 
