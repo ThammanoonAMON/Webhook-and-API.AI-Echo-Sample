@@ -31,9 +31,7 @@ restService.use(bodyParser.json());
 restService.post("/echo", function(req, res) {
   var speech = output;
   return res.json({
-    text: {
-      text: [output]
-    }
+    fulfillmentText: output
   });
 });
 
