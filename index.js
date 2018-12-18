@@ -32,7 +32,10 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  temp = req.body && req.body.parameters && req.body.parameters.echoText;
+  temp =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.echoText;
 
   request(monday, (error, response, html) => {
     if (!error && response.statusCode == 200) {
