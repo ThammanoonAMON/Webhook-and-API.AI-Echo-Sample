@@ -32,11 +32,8 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  if (
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.echoText == "วันจันทร์"
-  ) {
+  temp = req.body.queryResult.parameters.echoText;
+  if (temp == "วันจันทร์") {
     request(monday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -110,11 +107,7 @@ restService.post("/echo", function(req, res) {
           output8;
       }
     });
-  } else if (
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.echoText == "วันอังคาร"
-  ) {
+  } else if (temp == "วันอังคาร") {
     request(tuesday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -188,11 +181,7 @@ restService.post("/echo", function(req, res) {
           output8;
       }
     });
-  } else if (
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.echoText == "วันพุธ"
-  ) {
+  } else if (temp == "วันพุธ") {
     request(wednesday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -266,11 +255,7 @@ restService.post("/echo", function(req, res) {
           output8;
       }
     });
-  } else if (
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.echoText == "วันพฤหัสบดี"
-  ) {
+  } else if (temp == "วันพฤหัสบดี") {
     request(thursday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -344,11 +329,7 @@ restService.post("/echo", function(req, res) {
           output8;
       }
     });
-  } else if (
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.echoText == "วันศุกร์"
-  ) {
+  } else if (temp == "วันศุกร์") {
     request(friday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -422,11 +403,7 @@ restService.post("/echo", function(req, res) {
           output8;
       }
     });
-  } else if (
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.echoText == "วันเสาร์"
-  ) {
+  } else if (temp == "วันเสาร์") {
     request(saturday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
@@ -500,11 +477,7 @@ restService.post("/echo", function(req, res) {
           output8;
       }
     });
-  } else if (
-    req.body.queryResult &&
-    req.body.queryResult.parameters &&
-    req.body.queryResult.parameters.echoText == "วันอาทิตย์"
-  ) {
+  } else if (temp == "วันอาทิตย์") {
     request(sunday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
