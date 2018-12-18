@@ -20,7 +20,7 @@ var result4;
 var result5;
 var result6;
 var result7;
-var noResult = "กรุณาลองใหม่อีครั้ง";
+var noResult = "ขอโทษค่ะ ฉันไม่เข้าใจค่ะ";
 var monday = "https://www.sanook.com/horoscope/152201/";
 var tuesday = "https://www.sanook.com/horoscope/152205/";
 var wednesday = "hhttps://www.sanook.com/horoscope/152209/";
