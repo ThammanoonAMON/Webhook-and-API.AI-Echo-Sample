@@ -17,23 +17,12 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  request(
-    "https://www.sanook.com/horoscope/152061/",
-    (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
-
-        const luck = $(".jsx-2224007166 .jsx-3435773413");
-        output = luck
-          .find("p")
-          .slice(0, 3)
-          .text();
-
-        console.log(output);
-      }
-    }
-  );
-  var speech = output;
+  var speech =
+    req.body.result &&
+    req.body.result.parameters &&
+    req.body.result.parameters.echoText
+      ? req.body.result.parameters.echoText
+      : "Seems like some problem. Speak again.";
   return res.json({
     speech: speech,
     displayText: speech,
