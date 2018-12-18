@@ -20,7 +20,7 @@ var thursday = "https://www.sanook.com/horoscope/152213/";
 var friday = "https://www.sanook.com/horoscope/152217/";
 var saturday = "https://www.sanook.com/horoscope/152221/";
 var sunday = "https://www.sanook.com/horoscope/152225/";
-var temp;
+var temp = "";
 
 const restService = express();
 
