@@ -32,7 +32,7 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
   request(
-    "https://www.sanook.com/horoscope/152061/",
+    "https://www.sanook.com/horoscope/152089/",
     (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
