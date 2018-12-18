@@ -20,7 +20,6 @@ var thursday;
 var friday;
 var saturday;
 var sunday;
-var day;
 
 const restService = express();
 
@@ -32,86 +31,82 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  if (
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText === "เกิดวันจันทร์"
-  ) {
-    day = "https://www.sanook.com/horoscope/152037/";
-  }
-  request(day, (error, response, html) => {
-    if (!error && response.statusCode == 200) {
-      const $ = cheerio.load(html);
+  request(
+    "https://www.sanook.com/horoscope/152061/",
+    (error, response, html) => {
+      if (!error && response.statusCode == 200) {
+        const $ = cheerio.load(html);
 
-      const luck = $(".jsx-2224007166 .jsx-3435773413");
-      output1 = luck
-        .find("p")
-        .slice(0, 1)
-        .text();
+        const luck = $(".jsx-2224007166 .jsx-3435773413");
+        output1 = luck
+          .find("p")
+          .slice(0, 1)
+          .text();
 
-      output2 = luck
-        .find("p")
-        .slice(1, 2)
-        .text();
+        output2 = luck
+          .find("p")
+          .slice(1, 2)
+          .text();
 
-      output3 = luck
-        .find("p")
-        .slice(2, 3)
-        .text();
+        output3 = luck
+          .find("p")
+          .slice(2, 3)
+          .text();
 
-      output4 = luck
-        .find("p")
-        .slice(3, 4)
-        .text();
+        output4 = luck
+          .find("p")
+          .slice(3, 4)
+          .text();
 
-      output5 = luck
-        .find("p")
-        .slice(4, 5)
-        .text();
+        output5 = luck
+          .find("p")
+          .slice(4, 5)
+          .text();
 
-      output6 = luck
-        .find("p")
-        .slice(5, 6)
-        .text();
+        output6 = luck
+          .find("p")
+          .slice(5, 6)
+          .text();
 
-      output7 = luck
-        .find("p")
-        .slice(6, 7)
-        .text();
+        output7 = luck
+          .find("p")
+          .slice(6, 7)
+          .text();
 
-      output8 = luck
-        .find("p")
-        .slice(7, 8)
-        .text();
+        output8 = luck
+          .find("p")
+          .slice(7, 8)
+          .text();
 
-      result =
-        "ดวงคนเกิดวันจัทร์ วันนี้ :" +
-        "\n" +
-        "\n" +
-        output1 +
-        "\n" +
-        "\n" +
-        output2 +
-        "\n" +
-        "\n" +
-        output3 +
-        "\n" +
-        "\n" +
-        output4 +
-        "\n" +
-        "\n" +
-        output5 +
-        "\n" +
-        "\n" +
-        output6 +
-        "\n" +
-        "\n" +
-        output7 +
-        "\n" +
-        "\n" +
-        output8;
+        result =
+          "ดวงคนเกิดวันจัทร์ วันนี้ :" +
+          "\n" +
+          "\n" +
+          output1 +
+          "\n" +
+          "\n" +
+          output2 +
+          "\n" +
+          "\n" +
+          output3 +
+          "\n" +
+          "\n" +
+          output4 +
+          "\n" +
+          "\n" +
+          output5 +
+          "\n" +
+          "\n" +
+          output6 +
+          "\n" +
+          "\n" +
+          output7 +
+          "\n" +
+          "\n" +
+          output8;
+      }
     }
-  });
+  );
 
   return res.json({
     fulfillmentText: result
