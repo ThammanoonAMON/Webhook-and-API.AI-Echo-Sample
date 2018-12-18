@@ -4,7 +4,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const cheerio = require("cheerio");
-var output;
+var output1;
+var output2;
+var output3;
+var result;
 
 const restService = express();
 
@@ -19,19 +22,30 @@ request("https://www.sanook.com/horoscope/152061/", (error, response, html) => {
     const $ = cheerio.load(html);
 
     const luck = $(".jsx-2224007166 .jsx-3435773413");
-    output = luck
+    output1 = luck
       .find("p")
-      .slice(0, 3)
+      .slice(0, 1)
       .text();
+
+    output2 = luck
+      .find("p")
+      .slice(1, 2)
+      .text();
+
+    output3 = luck
+      .find("p")
+      .slice(2, 3)
+      .text();
+
+    result = output1 + "\n" + output2 + "\n" + output3;
   }
 });
 
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var speech = output;
   return res.json({
-    fulfillmentText: output
+    fulfillmentText: result
   });
 });
 
