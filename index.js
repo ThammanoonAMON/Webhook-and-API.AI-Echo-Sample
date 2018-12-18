@@ -68,19 +68,29 @@ request("https://www.sanook.com/horoscope/152061/", (error, response, html) => {
       .text();
 
     result =
+      "ดวงคนเกิดวันจัทร์ วันนี้ :" +
+      "\n" +
+      "\n" +
       output1 +
+      "\n" +
       "\n" +
       output2 +
       "\n" +
+      "\n" +
       output3 +
+      "\n" +
       "\n" +
       output4 +
       "\n" +
+      "\n" +
       output5 +
+      "\n" +
       "\n" +
       output6 +
       "\n" +
+      "\n" +
       output7 +
+      "\n" +
       "\n" +
       output8;
   }
