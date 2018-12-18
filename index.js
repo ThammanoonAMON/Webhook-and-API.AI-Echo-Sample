@@ -45,22 +45,7 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
   return res.json({
-    fulfillmentText: result,
-    contents: {
-      type: "bubble",
-      direction: "ltr",
-      header: {
-        type: "box",
-        layout: "vertical",
-        contents: [
-          {
-            type: "text",
-            text: "test",
-            size: "xxl",
-            align: "center"
-          }
-        ]
-      }
+    fulfillmentText: result
   });
 });
 
