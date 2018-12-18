@@ -113,7 +113,7 @@ restService.post("/echo", function(req, res) {
   }
 
   return res.json({
-    fulfillmentText: temp
+    fulfillmentText: result
   });
 });
 
