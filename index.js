@@ -13,7 +13,14 @@ var output6;
 var output7;
 var output8;
 var result;
-var monday = "https://www.sanook.com/horoscope/152061/";
+var result1;
+var result2;
+var result3;
+var result4;
+var result5;
+var result6;
+var result7;
+var monday = "https://www.sanook.com/horoscope/152201/";
 var tuesday = "https://www.sanook.com/horoscope/152205/";
 var wednesday = "hhttps://www.sanook.com/horoscope/152209/";
 var thursday = "https://www.sanook.com/horoscope/152213/";
@@ -33,539 +40,535 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
   temp = req.body.queryResult.parameters.echoText;
+
+  request(monday, (error, response, html) => {
+    if (!error && response.statusCode == 200) {
+      const $ = cheerio.load(html);
+
+      const luck = $(".jsx-2224007166 .jsx-3435773413");
+      output1 = luck
+        .find("p")
+        .slice(0, 1)
+        .text();
+
+      output2 = luck
+        .find("p")
+        .slice(1, 2)
+        .text();
+
+      output3 = luck
+        .find("p")
+        .slice(2, 3)
+        .text();
+
+      output4 = luck
+        .find("p")
+        .slice(3, 4)
+        .text();
+
+      output5 = luck
+        .find("p")
+        .slice(4, 5)
+        .text();
+
+      output6 = luck
+        .find("p")
+        .slice(5, 6)
+        .text();
+
+      output7 = luck
+        .find("p")
+        .slice(6, 7)
+        .text();
+
+      output8 = luck
+        .find("p")
+        .slice(7, 8)
+        .text();
+
+      result1 =
+        "ดวงคนเกิดวันจัทร์ วันนี้ :" +
+        "\n" +
+        "\n" +
+        output1 +
+        "\n" +
+        "\n" +
+        output2 +
+        "\n" +
+        "\n" +
+        output3 +
+        "\n" +
+        "\n" +
+        output4 +
+        "\n" +
+        "\n" +
+        output5 +
+        "\n" +
+        "\n" +
+        output6 +
+        "\n" +
+        "\n" +
+        output7 +
+        "\n" +
+        "\n" +
+        output8;
+    }
+  });
+  request(tuesday, (error, response, html) => {
+    if (!error && response.statusCode == 200) {
+      const $ = cheerio.load(html);
+
+      const luck = $(".jsx-2224007166 .jsx-3435773413");
+      output1 = luck
+        .find("p")
+        .slice(0, 1)
+        .text();
+
+      output2 = luck
+        .find("p")
+        .slice(1, 2)
+        .text();
+
+      output3 = luck
+        .find("p")
+        .slice(2, 3)
+        .text();
+
+      output4 = luck
+        .find("p")
+        .slice(3, 4)
+        .text();
+
+      output5 = luck
+        .find("p")
+        .slice(4, 5)
+        .text();
+
+      output6 = luck
+        .find("p")
+        .slice(5, 6)
+        .text();
+
+      output7 = luck
+        .find("p")
+        .slice(6, 7)
+        .text();
+
+      output8 = luck
+        .find("p")
+        .slice(7, 8)
+        .text();
+
+      result2 =
+        "ดวงคนเกิดวันอังคาร วันนี้ :" +
+        "\n" +
+        "\n" +
+        output1 +
+        "\n" +
+        "\n" +
+        output2 +
+        "\n" +
+        "\n" +
+        output3 +
+        "\n" +
+        "\n" +
+        output4 +
+        "\n" +
+        "\n" +
+        output5 +
+        "\n" +
+        "\n" +
+        output6 +
+        "\n" +
+        "\n" +
+        output7 +
+        "\n" +
+        "\n" +
+        output8;
+    }
+  });
+  request(wednesday, (error, response, html) => {
+    if (!error && response.statusCode == 200) {
+      const $ = cheerio.load(html);
+
+      const luck = $(".jsx-2224007166 .jsx-3435773413");
+      output1 = luck
+        .find("p")
+        .slice(0, 1)
+        .text();
+
+      output2 = luck
+        .find("p")
+        .slice(1, 2)
+        .text();
+
+      output3 = luck
+        .find("p")
+        .slice(2, 3)
+        .text();
+
+      output4 = luck
+        .find("p")
+        .slice(3, 4)
+        .text();
+
+      output5 = luck
+        .find("p")
+        .slice(4, 5)
+        .text();
+
+      output6 = luck
+        .find("p")
+        .slice(5, 6)
+        .text();
+
+      output7 = luck
+        .find("p")
+        .slice(6, 7)
+        .text();
+
+      output8 = luck
+        .find("p")
+        .slice(7, 8)
+        .text();
+
+      result3 =
+        "ดวงคนเกิดวันพุธ วันนี้ :" +
+        "\n" +
+        "\n" +
+        output1 +
+        "\n" +
+        "\n" +
+        output2 +
+        "\n" +
+        "\n" +
+        output3 +
+        "\n" +
+        "\n" +
+        output4 +
+        "\n" +
+        "\n" +
+        output5 +
+        "\n" +
+        "\n" +
+        output6 +
+        "\n" +
+        "\n" +
+        output7 +
+        "\n" +
+        "\n" +
+        output8;
+    }
+  });
+  request(thursday, (error, response, html) => {
+    if (!error && response.statusCode == 200) {
+      const $ = cheerio.load(html);
+
+      const luck = $(".jsx-2224007166 .jsx-3435773413");
+      output1 = luck
+        .find("p")
+        .slice(0, 1)
+        .text();
+
+      output2 = luck
+        .find("p")
+        .slice(1, 2)
+        .text();
+
+      output3 = luck
+        .find("p")
+        .slice(2, 3)
+        .text();
+
+      output4 = luck
+        .find("p")
+        .slice(3, 4)
+        .text();
+
+      output5 = luck
+        .find("p")
+        .slice(4, 5)
+        .text();
+
+      output6 = luck
+        .find("p")
+        .slice(5, 6)
+        .text();
+
+      output7 = luck
+        .find("p")
+        .slice(6, 7)
+        .text();
+
+      output8 = luck
+        .find("p")
+        .slice(7, 8)
+        .text();
+
+      result4 =
+        "ดวงคนเกิดวันพฤหัสบดี วันนี้ :" +
+        "\n" +
+        "\n" +
+        output1 +
+        "\n" +
+        "\n" +
+        output2 +
+        "\n" +
+        "\n" +
+        output3 +
+        "\n" +
+        "\n" +
+        output4 +
+        "\n" +
+        "\n" +
+        output5 +
+        "\n" +
+        "\n" +
+        output6 +
+        "\n" +
+        "\n" +
+        output7 +
+        "\n" +
+        "\n" +
+        output8;
+    }
+  });
+  request(friday, (error, response, html) => {
+    if (!error && response.statusCode == 200) {
+      const $ = cheerio.load(html);
+
+      const luck = $(".jsx-2224007166 .jsx-3435773413");
+      output1 = luck
+        .find("p")
+        .slice(0, 1)
+        .text();
+
+      output2 = luck
+        .find("p")
+        .slice(1, 2)
+        .text();
+
+      output3 = luck
+        .find("p")
+        .slice(2, 3)
+        .text();
+
+      output4 = luck
+        .find("p")
+        .slice(3, 4)
+        .text();
+
+      output5 = luck
+        .find("p")
+        .slice(4, 5)
+        .text();
+
+      output6 = luck
+        .find("p")
+        .slice(5, 6)
+        .text();
+
+      output7 = luck
+        .find("p")
+        .slice(6, 7)
+        .text();
+
+      output8 = luck
+        .find("p")
+        .slice(7, 8)
+        .text();
+
+      result5 =
+        "ดวงคนเกิดวันศุกร์ วันนี้ :" +
+        "\n" +
+        "\n" +
+        output1 +
+        "\n" +
+        "\n" +
+        output2 +
+        "\n" +
+        "\n" +
+        output3 +
+        "\n" +
+        "\n" +
+        output4 +
+        "\n" +
+        "\n" +
+        output5 +
+        "\n" +
+        "\n" +
+        output6 +
+        "\n" +
+        "\n" +
+        output7 +
+        "\n" +
+        "\n" +
+        output8;
+    }
+  });
+  request(saturday, (error, response, html) => {
+    if (!error && response.statusCode == 200) {
+      const $ = cheerio.load(html);
+
+      const luck = $(".jsx-2224007166 .jsx-3435773413");
+      output1 = luck
+        .find("p")
+        .slice(0, 1)
+        .text();
+
+      output2 = luck
+        .find("p")
+        .slice(1, 2)
+        .text();
+
+      output3 = luck
+        .find("p")
+        .slice(2, 3)
+        .text();
+
+      output4 = luck
+        .find("p")
+        .slice(3, 4)
+        .text();
+
+      output5 = luck
+        .find("p")
+        .slice(4, 5)
+        .text();
+
+      output6 = luck
+        .find("p")
+        .slice(5, 6)
+        .text();
+
+      output7 = luck
+        .find("p")
+        .slice(6, 7)
+        .text();
+
+      output8 = luck
+        .find("p")
+        .slice(7, 8)
+        .text();
+
+      result6 =
+        "ดวงคนเกิดวันเสาร์ วันนี้ :" +
+        "\n" +
+        "\n" +
+        output1 +
+        "\n" +
+        "\n" +
+        output2 +
+        "\n" +
+        "\n" +
+        output3 +
+        "\n" +
+        "\n" +
+        output4 +
+        "\n" +
+        "\n" +
+        output5 +
+        "\n" +
+        "\n" +
+        output6 +
+        "\n" +
+        "\n" +
+        output7 +
+        "\n" +
+        "\n" +
+        output8;
+    }
+  });
+  request(sunday, (error, response, html) => {
+    if (!error && response.statusCode == 200) {
+      const $ = cheerio.load(html);
+
+      const luck = $(".jsx-2224007166 .jsx-3435773413");
+      output1 = luck
+        .find("p")
+        .slice(0, 1)
+        .text();
+
+      output2 = luck
+        .find("p")
+        .slice(1, 2)
+        .text();
+
+      output3 = luck
+        .find("p")
+        .slice(2, 3)
+        .text();
+
+      output4 = luck
+        .find("p")
+        .slice(3, 4)
+        .text();
+
+      output5 = luck
+        .find("p")
+        .slice(4, 5)
+        .text();
+
+      output6 = luck
+        .find("p")
+        .slice(5, 6)
+        .text();
+
+      output7 = luck
+        .find("p")
+        .slice(6, 7)
+        .text();
+
+      output8 = luck
+        .find("p")
+        .slice(7, 8)
+        .text();
+
+      result7 =
+        "ดวงคนเกิดวันอาทิตย์ วันนี้ :" +
+        "\n" +
+        "\n" +
+        output1 +
+        "\n" +
+        "\n" +
+        output2 +
+        "\n" +
+        "\n" +
+        output3 +
+        "\n" +
+        "\n" +
+        output4 +
+        "\n" +
+        "\n" +
+        output5 +
+        "\n" +
+        "\n" +
+        output6 +
+        "\n" +
+        "\n" +
+        output7 +
+        "\n" +
+        "\n" +
+        output8;
+    }
+  });
   if (temp == "วันจันทร์") {
-    request(
-      {
-        method: "GET",
-        headers: {
-          "user-agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36"
-        },
-        url: monday,
-        json: true
-      },
-      (error, response, html) => {
-        if (!error && response.statusCode == 200) {
-          const $ = cheerio.load(html);
-
-          const luck = $(".jsx-2224007166 .jsx-3435773413");
-          output1 = luck
-            .find("p")
-            .slice(0, 1)
-            .text();
-
-          output2 = luck
-            .find("p")
-            .slice(1, 2)
-            .text();
-
-          output3 = luck
-            .find("p")
-            .slice(2, 3)
-            .text();
-
-          output4 = luck
-            .find("p")
-            .slice(3, 4)
-            .text();
-
-          output5 = luck
-            .find("p")
-            .slice(4, 5)
-            .text();
-
-          output6 = luck
-            .find("p")
-            .slice(5, 6)
-            .text();
-
-          output7 = luck
-            .find("p")
-            .slice(6, 7)
-            .text();
-
-          output8 = luck
-            .find("p")
-            .slice(7, 8)
-            .text();
-
-          result =
-            "ดวงคนเกิดวันจัทร์ วันนี้ :" +
-            "\n" +
-            "\n" +
-            output1 +
-            "\n" +
-            "\n" +
-            output2 +
-            "\n" +
-            "\n" +
-            output3 +
-            "\n" +
-            "\n" +
-            output4 +
-            "\n" +
-            "\n" +
-            output5 +
-            "\n" +
-            "\n" +
-            output6 +
-            "\n" +
-            "\n" +
-            output7 +
-            "\n" +
-            "\n" +
-            output8;
-        }
-      }
-    );
+    result = result1;
   } else if (temp == "วันอังคาร") {
-    request(tuesday, (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
-
-        const luck = $(".jsx-2224007166 .jsx-3435773413");
-        output1 = luck
-          .find("p")
-          .slice(0, 1)
-          .text();
-
-        output2 = luck
-          .find("p")
-          .slice(1, 2)
-          .text();
-
-        output3 = luck
-          .find("p")
-          .slice(2, 3)
-          .text();
-
-        output4 = luck
-          .find("p")
-          .slice(3, 4)
-          .text();
-
-        output5 = luck
-          .find("p")
-          .slice(4, 5)
-          .text();
-
-        output6 = luck
-          .find("p")
-          .slice(5, 6)
-          .text();
-
-        output7 = luck
-          .find("p")
-          .slice(6, 7)
-          .text();
-
-        output8 = luck
-          .find("p")
-          .slice(7, 8)
-          .text();
-
-        result =
-          "ดวงคนเกิดวันอังคาร วันนี้ :" +
-          "\n" +
-          "\n" +
-          output1 +
-          "\n" +
-          "\n" +
-          output2 +
-          "\n" +
-          "\n" +
-          output3 +
-          "\n" +
-          "\n" +
-          output4 +
-          "\n" +
-          "\n" +
-          output5 +
-          "\n" +
-          "\n" +
-          output6 +
-          "\n" +
-          "\n" +
-          output7 +
-          "\n" +
-          "\n" +
-          output8;
-      }
-    });
+    result = result2;
   } else if (temp == "วันพุธ") {
-    request(wednesday, (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
-
-        const luck = $(".jsx-2224007166 .jsx-3435773413");
-        output1 = luck
-          .find("p")
-          .slice(0, 1)
-          .text();
-
-        output2 = luck
-          .find("p")
-          .slice(1, 2)
-          .text();
-
-        output3 = luck
-          .find("p")
-          .slice(2, 3)
-          .text();
-
-        output4 = luck
-          .find("p")
-          .slice(3, 4)
-          .text();
-
-        output5 = luck
-          .find("p")
-          .slice(4, 5)
-          .text();
-
-        output6 = luck
-          .find("p")
-          .slice(5, 6)
-          .text();
-
-        output7 = luck
-          .find("p")
-          .slice(6, 7)
-          .text();
-
-        output8 = luck
-          .find("p")
-          .slice(7, 8)
-          .text();
-
-        result =
-          "ดวงคนเกิดวันพุธ วันนี้ :" +
-          "\n" +
-          "\n" +
-          output1 +
-          "\n" +
-          "\n" +
-          output2 +
-          "\n" +
-          "\n" +
-          output3 +
-          "\n" +
-          "\n" +
-          output4 +
-          "\n" +
-          "\n" +
-          output5 +
-          "\n" +
-          "\n" +
-          output6 +
-          "\n" +
-          "\n" +
-          output7 +
-          "\n" +
-          "\n" +
-          output8;
-      }
-    });
+    result = result3;
   } else if (temp == "วันพฤหัสบดี") {
-    request(thursday, (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
-
-        const luck = $(".jsx-2224007166 .jsx-3435773413");
-        output1 = luck
-          .find("p")
-          .slice(0, 1)
-          .text();
-
-        output2 = luck
-          .find("p")
-          .slice(1, 2)
-          .text();
-
-        output3 = luck
-          .find("p")
-          .slice(2, 3)
-          .text();
-
-        output4 = luck
-          .find("p")
-          .slice(3, 4)
-          .text();
-
-        output5 = luck
-          .find("p")
-          .slice(4, 5)
-          .text();
-
-        output6 = luck
-          .find("p")
-          .slice(5, 6)
-          .text();
-
-        output7 = luck
-          .find("p")
-          .slice(6, 7)
-          .text();
-
-        output8 = luck
-          .find("p")
-          .slice(7, 8)
-          .text();
-
-        result =
-          "ดวงคนเกิดวันพฤหัสบดี วันนี้ :" +
-          "\n" +
-          "\n" +
-          output1 +
-          "\n" +
-          "\n" +
-          output2 +
-          "\n" +
-          "\n" +
-          output3 +
-          "\n" +
-          "\n" +
-          output4 +
-          "\n" +
-          "\n" +
-          output5 +
-          "\n" +
-          "\n" +
-          output6 +
-          "\n" +
-          "\n" +
-          output7 +
-          "\n" +
-          "\n" +
-          output8;
-      }
-    });
+    result = result4;
   } else if (temp == "วันศุกร์") {
-    request(friday, (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
-
-        const luck = $(".jsx-2224007166 .jsx-3435773413");
-        output1 = luck
-          .find("p")
-          .slice(0, 1)
-          .text();
-
-        output2 = luck
-          .find("p")
-          .slice(1, 2)
-          .text();
-
-        output3 = luck
-          .find("p")
-          .slice(2, 3)
-          .text();
-
-        output4 = luck
-          .find("p")
-          .slice(3, 4)
-          .text();
-
-        output5 = luck
-          .find("p")
-          .slice(4, 5)
-          .text();
-
-        output6 = luck
-          .find("p")
-          .slice(5, 6)
-          .text();
-
-        output7 = luck
-          .find("p")
-          .slice(6, 7)
-          .text();
-
-        output8 = luck
-          .find("p")
-          .slice(7, 8)
-          .text();
-
-        result =
-          "ดวงคนเกิดวันศุกร์ วันนี้ :" +
-          "\n" +
-          "\n" +
-          output1 +
-          "\n" +
-          "\n" +
-          output2 +
-          "\n" +
-          "\n" +
-          output3 +
-          "\n" +
-          "\n" +
-          output4 +
-          "\n" +
-          "\n" +
-          output5 +
-          "\n" +
-          "\n" +
-          output6 +
-          "\n" +
-          "\n" +
-          output7 +
-          "\n" +
-          "\n" +
-          output8;
-      }
-    });
+    result = result5;
   } else if (temp == "วันเสาร์") {
-    request(saturday, (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
-
-        const luck = $(".jsx-2224007166 .jsx-3435773413");
-        output1 = luck
-          .find("p")
-          .slice(0, 1)
-          .text();
-
-        output2 = luck
-          .find("p")
-          .slice(1, 2)
-          .text();
-
-        output3 = luck
-          .find("p")
-          .slice(2, 3)
-          .text();
-
-        output4 = luck
-          .find("p")
-          .slice(3, 4)
-          .text();
-
-        output5 = luck
-          .find("p")
-          .slice(4, 5)
-          .text();
-
-        output6 = luck
-          .find("p")
-          .slice(5, 6)
-          .text();
-
-        output7 = luck
-          .find("p")
-          .slice(6, 7)
-          .text();
-
-        output8 = luck
-          .find("p")
-          .slice(7, 8)
-          .text();
-
-        result =
-          "ดวงคนเกิดวันเสาร์ วันนี้ :" +
-          "\n" +
-          "\n" +
-          output1 +
-          "\n" +
-          "\n" +
-          output2 +
-          "\n" +
-          "\n" +
-          output3 +
-          "\n" +
-          "\n" +
-          output4 +
-          "\n" +
-          "\n" +
-          output5 +
-          "\n" +
-          "\n" +
-          output6 +
-          "\n" +
-          "\n" +
-          output7 +
-          "\n" +
-          "\n" +
-          output8;
-      }
-    });
+    result = result6;
   } else if (temp == "วันอาทิตย์") {
-    request(sunday, (error, response, html) => {
-      if (!error && response.statusCode == 200) {
-        const $ = cheerio.load(html);
-
-        const luck = $(".jsx-2224007166 .jsx-3435773413");
-        output1 = luck
-          .find("p")
-          .slice(0, 1)
-          .text();
-
-        output2 = luck
-          .find("p")
-          .slice(1, 2)
-          .text();
-
-        output3 = luck
-          .find("p")
-          .slice(2, 3)
-          .text();
-
-        output4 = luck
-          .find("p")
-          .slice(3, 4)
-          .text();
-
-        output5 = luck
-          .find("p")
-          .slice(4, 5)
-          .text();
-
-        output6 = luck
-          .find("p")
-          .slice(5, 6)
-          .text();
-
-        output7 = luck
-          .find("p")
-          .slice(6, 7)
-          .text();
-
-        output8 = luck
-          .find("p")
-          .slice(7, 8)
-          .text();
-
-        result =
-          "ดวงคนเกิดวันอาทิตย์ วันนี้ :" +
-          "\n" +
-          "\n" +
-          output1 +
-          "\n" +
-          "\n" +
-          output2 +
-          "\n" +
-          "\n" +
-          output3 +
-          "\n" +
-          "\n" +
-          output4 +
-          "\n" +
-          "\n" +
-          output5 +
-          "\n" +
-          "\n" +
-          output6 +
-          "\n" +
-          "\n" +
-          output7 +
-          "\n" +
-          "\n" +
-          output8;
-      }
-    });
+    result = result7;
   }
-
   return res.json({
-    fulfillmentText: temp
+    fulfillmentText: result
   });
 });
 
