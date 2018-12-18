@@ -20,6 +20,7 @@ var result4;
 var result5;
 var result6;
 var result7;
+var noResult = "กรุณาลองใหม่อีครั้ง";
 var monday = "https://www.sanook.com/horoscope/152201/";
 var tuesday = "https://www.sanook.com/horoscope/152205/";
 var wednesday = "hhttps://www.sanook.com/horoscope/152209/";
@@ -566,6 +567,8 @@ restService.post("/echo", function(req, res) {
     result = result6;
   } else if (temp == "วันอาทิตย์") {
     result = result7;
+  } else {
+    result = noResult;
   }
   return res.json({
     fulfillmentText: result
