@@ -2,6 +2,8 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const request = require("request");
+const cheerio = require("cheerio");
 
 const restService = express();
 
@@ -10,6 +12,20 @@ restService.use(
     extended: true
   })
 );
+
+request("https://www.sanook.com/horoscope/152061/", (error, response, html) => {
+  if (!error && response.statusCode == 200) {
+    const $ = cheerio.load(html);
+
+    const luck = $(".jsx-2224007166 .jsx-3435773413");
+    const output = luck
+      .find("p")
+      .slice(0, 3)
+      .text();
+
+    console.log(output);
+  }
+});
 
 restService.use(bodyParser.json());
 
@@ -30,7 +46,7 @@ restService.post("/echo", function(req, res) {
 restService.post("/audio", function(req, res) {
   var speech = "";
   switch (req.body.result.parameters.AudioSample.toLowerCase()) {
-    //Speech Synthesis Markup Language 
+    //Speech Synthesis Markup Language
     case "music one":
       speech =
         '<speak><audio src="https://actions.google.com/sounds/v1/cartoon/slide_whistle.ogg">did not get your audio file</audio></speak>';
