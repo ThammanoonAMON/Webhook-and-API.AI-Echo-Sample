@@ -31,7 +31,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  if (req.body.result.parameters.echoText === "เกิดวันจันทร์") {
+  if (req.body.result.parameters.echoText == "เกิดวันจันทร์") {
     request(monday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
