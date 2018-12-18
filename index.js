@@ -20,6 +20,7 @@ var thursday = "https://www.sanook.com/horoscope/152213/";
 var friday = "https://www.sanook.com/horoscope/152217/";
 var saturday = "https://www.sanook.com/horoscope/152221/";
 var sunday = "https://www.sanook.com/horoscope/152225/";
+var temp;
 
 const restService = express();
 
@@ -31,7 +32,8 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  if (treq.body.queryResult.parameters.echoText == "monday") {
+  temp = req.body.queryResult && req.body.queryResult.queryText;
+  if (temp == "วันจันทร์") {
     request(monday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
         const $ = cheerio.load(html);
