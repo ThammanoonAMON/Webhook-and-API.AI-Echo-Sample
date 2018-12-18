@@ -16,23 +16,24 @@ restService.use(
 restService.use(bodyParser.json());
 
 request("https://www.sanook.com/horoscope/152061/", (error, response, html) => {
-  if (!error && response.statusCode == 200) {
-    const $ = cheerio.load(html);
-
-    const luck = $(".jsx-2224007166 .jsx-3435773413");
-    const output = luck
-      .find("p")
-      .slice(0, 3)
-      .text();
+  if (err) {
+    reject(err);
+    return console.log("Failed to request: ", err);
   }
-});
 
-restService.post("/echo", function(req, res) {
-  var speech = "test";
-  return res.json({
-    speech: speech,
-    displayText: speech,
-    source: "webhook-echo-sample"
+  const $ = cheerio.load(html);
+  const luck = $(".jsx-2224007166 .jsx-3435773413");
+  const output = luck
+    .find("p")
+    .slice(0, 3)
+    .text();
+  restService.post("/echo", function(req, res) {
+    var speech = output;
+    return res.json({
+      speech: speech,
+      displayText: speech,
+      source: "webhook-echo-sample"
+    });
   });
 });
 
