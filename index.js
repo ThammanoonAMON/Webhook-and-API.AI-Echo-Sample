@@ -32,7 +32,10 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  temp = req.body.queryResult.parameters.echoText;
+  temp =
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters.echoText;
   if (temp === "วันจันทร์") {
     request(monday, (error, response, html) => {
       if (!error && response.statusCode == 200) {
@@ -110,7 +113,7 @@ restService.post("/echo", function(req, res) {
   }
 
   return res.json({
-    fulfillmentText: result
+    fulfillmentText: temp
   });
 });
 
