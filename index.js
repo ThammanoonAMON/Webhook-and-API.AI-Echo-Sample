@@ -23,7 +23,7 @@ var result7;
 var noResult = "ขอโทษค่ะ ฉันไม่เข้าใจค่ะ";
 var monday = "https://www.sanook.com/horoscope/152201/";
 var tuesday = "https://www.sanook.com/horoscope/152205/";
-var wednesday = "hhttps://www.sanook.com/horoscope/152209/";
+var wednesday = "https://www.sanook.com/horoscope/152209/";
 var thursday = "https://www.sanook.com/horoscope/152213/";
 var friday = "https://www.sanook.com/horoscope/152217/";
 var saturday = "https://www.sanook.com/horoscope/152221/";
